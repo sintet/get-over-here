@@ -6,7 +6,7 @@
 var app = angular.module('getOverHere', ['ionic'])
 
 app.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/main");
     $stateProvider
       .state('requests',{
           url:"/main",
