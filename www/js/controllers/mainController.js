@@ -7,7 +7,9 @@ app.controller('mainController',['$scope','$state', function($scope, $state){
 
       {name:"boris", url:"img/cat2.jpg"},
 
-      {name:"johnson",url:"img/cat3.jpg"}
+      {name:"johnson",url:"img/cat3.jpg"},
+
+    
 
       ]
 
