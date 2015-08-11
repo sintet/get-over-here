@@ -1,15 +1,12 @@
-<div>
-    <ion-list>
+<ion-list>
+    <h1>Places</h1>
+    <ion-item ng-repeat="place in places">
 
-        <ion-item ng-repeat="place in places">
+          <img ng-src="{{place.url}}" alt="">
+          {{place.name}}
 
-              <img ng-src="{{place.url}}" alt="">
-              {{place.name}}
+    </ion-item>
 
-        </ion-item>
-
-    </ion-list>
-    <button type="button" name="back" ng-click="goToUsers()">back</button>
-    <button type="button" name="next" ng-click="goToUrgency() " nav-direction="forward">next</button>
-
-</div>
+</ion-list>
+<button type="button" name="back" ng-click="goToUsers()">back</button>
+<button type="button" name="next" ng-click="goToUrgency() " nav-direction="forward">next</button>

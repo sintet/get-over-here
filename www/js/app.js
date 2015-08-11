@@ -8,6 +8,13 @@ var app = angular.module('getOverHere', ['ionic'])
 app.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise("/");
     $stateProvider
+      .state('requests',{
+          url:"/main",
+          templateUrl:"views/requests.html"
+
+      })
+
+
       .state('send',{
         url:'/send',
         templateUrl:'views/send.html',

@@ -1,6 +1,6 @@
-<div>
-    <ion-list>
 
+    <ion-list >
+        <h1>Users</h1>
         <ion-item ng-repeat="user in users">
 
               <img ng-src="{{user.url}}" alt="">
@@ -9,7 +9,5 @@
         </ion-item>
 
     </ion-list>
-      <button type="button" name="cancel">cancel</button>
+      <button type="button" name="cancel" ng-click="goToMain()" >cancel</button>
       <button type="button" name="next" ng-click="goToPlaces()" nav-direction="forward">next</button>
-
-</div>

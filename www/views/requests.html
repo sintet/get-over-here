@@ -1,0 +1,17 @@
+<ion-list >
+
+    <ion-item ng-repeat="request in receivedRequests " ng-class="request.urgency" ng-click="showConfirm(request)">
+      {{request.time}}
+      <div class="item item-thumbnail-left">
+
+      <img ng-src="{{request.sender.url}}" alt="" />
+      {{request.sender.name}}
+      </div>
+      <div class="item item-thumbnail-right">
+
+      <img ng-src="{{request.place.url}}" alt="" />
+      {{request.place.name}}
+      </div>
+    </ion-item>
+
+</ion-list>
