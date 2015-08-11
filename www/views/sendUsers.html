@@ -1,0 +1,15 @@
+<div>
+    <ion-list>
+
+        <ion-item ng-repeat="user in users">
+
+              <img ng-src="{{user.url}}" alt="">
+            {{user.name}}
+
+        </ion-item>
+
+    </ion-list>
+      <button type="button" name="cancel">cancel</button>
+      <button type="button" name="next" ng-click="goToPlaces()">next</button>
+
+</div>
