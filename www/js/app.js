@@ -13,8 +13,6 @@ app.config(function($stateProvider, $urlRouterProvider){
           templateUrl:"views/requests.html"
 
       })
-
-
       .state('send',{
         url:'/send',
         templateUrl:'views/send.html',

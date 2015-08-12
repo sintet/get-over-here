@@ -1,4 +1,10 @@
 {
   "name": "get-over-here-ionic",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+      {
+        "path": "/api",
+        "proxyUrl": "https://guarded-shore-7533.herokuapp.com/api/"
+      }
+    ]
 }

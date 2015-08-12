@@ -1,6 +1,7 @@
-app.controller('mainController',['$scope','$state','$ionicPopup', function($scope, $state,$ionicPopup){
+app.controller('mainController',['$scope','$state','$ionicPopup', '$http', function($scope, $state,$ionicPopup, $http){
 
   $steps=["users","places","urgency"]
+
   $scope.users=[
 
       {name:"chris", url:"img/cat1.jpg"},
@@ -8,8 +9,6 @@ app.controller('mainController',['$scope','$state','$ionicPopup', function($scop
       {name:"boris", url:"img/cat2.jpg"},
 
       {name:"johnson",url:"img/cat3.jpg"},
-
-
 
       ]
 
@@ -74,7 +73,6 @@ app.controller('mainController',['$scope','$state','$ionicPopup', function($scop
       $scope.done=function(request){
         var index=  $scope.receivedRequests.indexOf(request)
         $scope.receivedRequests.splice(index, 1);
-
       }
 
       $scope.showConfirm = function(request) {
@@ -92,6 +90,13 @@ app.controller('mainController',['$scope','$state','$ionicPopup', function($scop
         });
       };
 
+    $scope.cat=function (){
+      $http.get('api/cats').success(function(resp){
+        console.log(resp)
+      })
+
+
+    }
 
 
 
