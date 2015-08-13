@@ -93,8 +93,8 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', funct
     $scope.cat=function (){
       $http.get('api/cats').success(function(resp){
         console.log(resp)
-      })
 
+      })
 
     }
 
