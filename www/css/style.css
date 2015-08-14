@@ -4,6 +4,9 @@ body {
 a {
   cursor: pointer;
 }
+.title {
+  cursor: pointer;
+}
 img {
   width: 100px;
   height: 100px;

@@ -1,0 +1,12 @@
+<ion-list>
+    <h1>Choose from {{currentStep}}</h1>
+    <ion-item ng-repeat="thing in things" ng-click="select(thing)">
+
+          <img ng-src="{{thing.url}}" alt="">
+          {{thing.name}}
+
+    </ion-item>
+
+</ion-list>
+<button type="button" name="back" ng-click="goTo(prevStep)">back</button>
+<button type="button" name="next" ng-click="goTo(nextStep) " nav-direction="forward">next</button>

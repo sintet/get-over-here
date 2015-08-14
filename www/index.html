@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="getOverHere">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -21,25 +21,40 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
 
+    <!-- Directives -->
+    <script src="js/directives/loginSignup.js"></script>
+    <!-- Services -->
+    <script src="js/services/userService.js"></script>
 
-    <script src="js\controllers\mainController.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/signUpController.js"></script>
+    <script src="js/controllers/sendRequest.js"></script>
+
+
+
+
   </head>
-  <body ng-app="getOverHere">
+  <body ng-controller="mainController" data-ng-init="init()">
 
-    <ion-side-menus ng-controller="mainController" enable-menu-with-back-views="true">
+    <ion-side-menus enable-menu-with-back-views="true" >
 
      <!-- Center content -->
      <ion-side-menu-content>
        <ion-header-bar class="bar-dark">
-         <h1 class="title">Get Over Here</h1>
+         <h1 class="title" ng-click="goTo('requests')">Get Over Here</h1>
        </ion-header-bar>
        <ion-content>
          <div>
+
+           <login-signup></login-signup>
+
            <a ui-sref="send.users">send</a>
+
            <div ui-view></div>
-            <div ng-click="cat()">
-                asdasd
-            </div>
+            <a ng-click="getUserRequests()">reqqqq</a>
+
          </div>
        </ion-content>
      </ion-side-menu-content>
@@ -49,9 +64,10 @@
        <ion-header-bar class="bar-dark">
          <h1 class="title">Profile</h1>
        </ion-header-bar>
+        <ion-content>
+          <h3>{{getCurrentUser().login}}</h3>
+        </ion-content>
      </ion-side-menu>
-
-
 
    </ion-side-menus>
   </body>

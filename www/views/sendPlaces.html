@@ -1,12 +1,15 @@
 <ion-list>
     <h1>Places</h1>
-    <ion-item ng-repeat="place in places">
+    <label class="item item-radio" ng-repeat="place in places" ng-click="selectPlace(place)" >
+       <input type="radio" name="group">
+       <div class="item-content">
+          <img ng-src="{{place.url}}" alt="" />
+         {{place.name}}
+       </div>
+       <i class="radio-icon ion-checkmark"></i>
+     </label>
 
-          <img ng-src="{{place.url}}" alt="">
-          {{place.name}}
-
-    </ion-item>
 
 </ion-list>
-<button type="button" name="back" ng-click="goToUsers()">back</button>
-<button type="button" name="next" ng-click="goToUrgency() " nav-direction="forward">next</button>
+<button type="button" name="back" ng-click="goTo('send.users')">back</button>
+<button type="button" name="next" ng-click="goTo('send.urgency') " nav-direction="forward">next</button>

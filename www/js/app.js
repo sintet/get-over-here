@@ -16,8 +16,14 @@ app.config(function($stateProvider, $urlRouterProvider){
       .state('send',{
         url:'/send',
         templateUrl:'views/send.html',
-        // abstract: true
+        controller:'sendRequest'
       })
+      // todo
+      // .state('send.step',{
+      //   url:'/:step',
+      //   templateUrl:'views/sendTemplate.html',
+      //
+      // })
       .state('send.users',{
         url:'/users',
         templateUrl: 'views/sendUsers.html',
@@ -31,6 +37,19 @@ app.config(function($stateProvider, $urlRouterProvider){
         url:'/urgency',
         templateUrl: 'views/sendUrgency.html'
       })
+
+      .state('signUp',{
+          url:'/signUp',
+          templateUrl:'views/signUp.html',
+          controller:'signUpController'
+      })
+      .state('login',{
+          url:'/login',
+          templateUrl:'views/login.html',
+          controller:'loginController'
+      })
+
+
     })
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

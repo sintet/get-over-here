@@ -1,13 +1,15 @@
 
     <ion-list >
         <h1>Users</h1>
-        <ion-item ng-repeat="user in users">
+      <label class="item item-radio" ng-repeat="user in allUsers" ng-click="selectUser(user)" ng-hide="getCurrentUser().login===user.login">
+         <input type="radio" name="group">
+         <div class="item-content">
+           {{user.login}}
+         </div>
+         <i class="radio-icon ion-checkmark"></i>
+       </label>
 
-              <img ng-src="{{user.url}}" alt="">
-            {{user.name}}
-
-        </ion-item>
-
+        
     </ion-list>
-      <button type="button" name="cancel" ng-click="goToMain()" >cancel</button>
-      <button type="button" name="next" ng-click="goToPlaces()" nav-direction="forward">next</button>
+      <button type="button" name="cancel" ng-click="goTo('requests')" >cancel</button>
+      <button type="button" name="next" ng-click="goTo('send.places')" nav-direction="forward">next</button>

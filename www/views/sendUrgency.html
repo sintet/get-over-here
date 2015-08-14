@@ -1,8 +1,8 @@
 
 
-  <ion-list class="urgency">
+  <ion-list class="urgency" >
     <h1>Urgency</h1>
-    <button class="button button-block yellow">
+    <button class="button button-block yellow" ng-click="selectUrgency('yellow')">
       button-balanced
     </button>
 
@@ -18,5 +18,5 @@
 
 
 
-<button type="button" name="back" ng-click="goToPlaces()">back</button>
-<button type="button" name="next" ng-click="sendRequest()">send</button>
+<button type="button" name="back" ng-click="goTo('send.places')">back</button>
+<button type="button" name="next" ng-click="sendRequest(req)">send</button>
