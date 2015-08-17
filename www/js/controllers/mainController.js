@@ -8,21 +8,22 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
 
     $scope.sending={}
 
-    $scope.urgencyStates = ["red","orange","yellow"]
+    $scope.urgencyStates = ["red","orange","yellow"];
 
     $scope.init = function(){
       $scope.getUsers();
       $scope.getUserRequests();
-      $state.go('requests')
-
+      $state.go('requests');
     }
+
     $scope.goTo = function(state){
       $state.go(state)
     }
+
     $scope.getCurrentUser = function(){
       return UserService.getCurrentUser()
     }
-    // todo delete
+    // todo DELETE
     $scope.done = function(request){
       var index = $scope.receivedRequests.indexOf(request)
       $scope.receivedRequests.splice(index, 1);
@@ -56,7 +57,7 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
         $scope.req = UserService.getCurrentUserRequests()
     }
 
-
+    // todo NORMAL SELECT
     $scope.select=function(option,req){
       $scope.sending[option]=req
       console.log($scope.sending)
@@ -77,6 +78,7 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
         console.log($scope.sending)
     }
 
+
     $scope.sendRequest=function(){
         $scope.sending.sender=UserService.getCurrentUser().login;
         console.log($scope.sending);
@@ -88,7 +90,5 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
           $state.go('requests')
         })
     }
-
-
 
 }])

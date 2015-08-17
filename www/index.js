@@ -6,7 +6,6 @@ var methodOverride = require('method-override')
 var morgan = require('morgan');
 var app = express();
 // var favicon = require('serve-favicon');
-
 // config
 mongoose.connect('mongodb://admin:12345@ds045882.mongolab.com:45882/cats');
 
@@ -37,6 +36,7 @@ app.use(methodOverride());
       email : String,
       // events: [{name:String,
         requests : [{
+          // time : Date,
           receiver : String,
           sender : String,
           place : String,
@@ -54,7 +54,6 @@ app.use(methodOverride());
   // })
   // var Event = mongoose.model('Event', eventSchema);
 
-
     // Users router
     // Get Users
     app.get('/api/users', function(req, res) {
@@ -69,8 +68,6 @@ app.use(methodOverride());
       User.findOne({_id: req.params.id}, function(err, user) {
           if (err)
               res.send(err)
-
-          // _id : req.params.id
           res.json(user);
       });
      });

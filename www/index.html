@@ -6,6 +6,7 @@
     <title>Get Over Here</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link rel="lib/animate.css" href="">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -16,13 +17,15 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
-    <script src="cordova.js"></script>
+    <!--  DONT FORGET TO UNCOMMENT IT!!!!!!!!!!!!!-->
+    <!-- <script src="cordova.js"></script> -->
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
 
     <!-- Directives -->
     <script src="js/directives/loginSignup.js"></script>
+    <script src="js/directives/sendRequestDirective.js" ></script>
     <!-- Services -->
     <script src="js/services/userService.js"></script>
 
@@ -43,6 +46,7 @@
      <!-- Center content -->
      <ion-side-menu-content>
        <ion-header-bar class="bar-dark">
+          <!-- <i class="icon ion-plus-circled"> Send request</i> -->
          <h1 class="title" ng-click="goTo('requests')">Get Over Here</h1>
        </ion-header-bar>
        <ion-content>

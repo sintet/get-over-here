@@ -1,7 +1,6 @@
 app.controller('signUpController',['$scope','UserService',function($scope, UserService){
 
 
-
   function User(login, password , email){
     this.login=login;
     this.password=password;

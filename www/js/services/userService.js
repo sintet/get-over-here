@@ -18,7 +18,7 @@ app.factory('UserService', ['$http','$q', function($http , $q){
       obj.setCurrentUser=function(currentUser){
           localStorage.currentUser=JSON.stringify(currentUser)
       }
-
+      // ????
       obj.putUserIntoLocalStorage=function (users){
         var cur =obj.getCurrentUser()
         for (var i = 0 ; i < users.length; i++){

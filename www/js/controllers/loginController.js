@@ -2,8 +2,8 @@ app.controller('loginController',['$scope','$state', 'UserService', function($sc
 
   $scope.logUser=function(user){
 
-    if(user){
-  		var obj={};
+    if (user) {
+  		var obj = {};
       UserService.getAllUsers().then(function(res){
       	obj.users=res
         console.log(obj.users)
@@ -23,11 +23,8 @@ app.controller('loginController',['$scope','$state', 'UserService', function($sc
     }
   }
 
-
   $scope.getUsers=function(){
     return UserService.getUsers()
   }
-
-
 
 }])
