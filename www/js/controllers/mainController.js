@@ -23,7 +23,7 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
     $scope.getCurrentUser = function(){
       return UserService.getCurrentUser()
     }
-    // todo DELETE
+    // todo DELETE AND PUT IT INTO SERVICE!!!!!
     $scope.done = function(request){
       var index = $scope.receivedRequests.indexOf(request)
       $scope.receivedRequests.splice(index, 1);
@@ -37,9 +37,7 @@ app.controller('mainController',['$scope','$state','$ionicPopup', '$http', 'User
       confirmPopup.then(function(res) {
         if(res) {
           console.log('You are sure');
-
           $scope.done(request);
-
         } else {
           console.log('You are not sure');
         }
